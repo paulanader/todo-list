@@ -1,27 +1,28 @@
-# React + TypeScript + Vite
+#To-Do List Front-end Project using React.js and TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Demo: [site](https://paula-nader-todo-list.netlify.app/)
 
-Currently, two official plugins are available:
+This project focuses on two key functionalities:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Task Listing: The application displays a dynamic list of tasks retrieved from a backend server. Each task is accompanied by its description and status.
 
-## Expanding the ESLint configuration
+Task Completion: Users can easily mark tasks as completed or not completed by interacting with intuitive buttons associated with each task. This functionality enables efficient management of tasks.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#Getting Started
+Follow these steps to set up and run the project on your local machine:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository to your local machine.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+`git clone [https://github.com/paulanader/todo-list](https://github.com/paulanader/todo-list)`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install project dependencies using Yarn.
+
+`yarn install`
+
+3. Start the development server.
+
+`yarn dev`
+
+Important: The project assumes a compatible backend server is accessible. To run the backend server, execute:
+
+`yarn dev:server`
