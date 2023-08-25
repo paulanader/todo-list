@@ -9,12 +9,15 @@ import {
 interface TasksCardProps {
   task: TaskType;
   handleClickingTheFinishTaskButton: (id: number) => void;
+  handleDeleteTask: (id: number) => void;
 }
 
 export const TasksCard = ({
   task,
   handleClickingTheFinishTaskButton,
+  handleDeleteTask,
 }: TasksCardProps) => {
+  console.log({ task });
   return (
     <TaskCardContainer>
       <button
@@ -24,9 +27,9 @@ export const TasksCard = ({
         {task.isDone ? <DoneTaskButton /> : <OpenTaskButton />}
       </button>
 
-      <span>{task?.description}</span>
-      <button type="button">
-        <TrashButton />
+      <span>{task.description}</span>
+      <button type="button" onClick={() => handleDeleteTask(task.id)}>
+        <TrashButton fadeIn={!!handleDeleteTask} />
       </button>
     </TaskCardContainer>
   );

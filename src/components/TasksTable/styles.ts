@@ -5,6 +5,11 @@ export const TasksTableContainer = styled.div`
   margin: 4rem auto 0;
 `;
 
+export const TableContainer = styled.div`
+  overflow-x: hidden;
+  max-height: 50vh;
+`;
+
 export const HeaderTable = styled.div`
   display: flex;
   align-items: center;

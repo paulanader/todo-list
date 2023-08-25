@@ -1,5 +1,24 @@
 import { CheckCircle, Circle, Trash } from "phosphor-react";
-import { styled } from "styled-components";
+
+import { keyframes, styled } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
 
 export const TaskCardContainer = styled.div`
   background-color: ${(props) => props.theme["gray-600"]};
@@ -33,7 +52,13 @@ export const DoneTaskButton = styled(CheckCircle)`
   border: transparent;
 `;
 
-export const TrashButton = styled(Trash)`
+interface FadeProps {
+  fadeIn: boolean;
+}
+
+export const TrashButton = styled(Trash)<FadeProps>`
   font-size: 1.25rem;
   color: ${(props) => props.theme["gray-400"]};
+
+  animation: ${(props) => (props.fadeIn ? fadeIn : fadeOut)} 0.3s ease-in-out;
 `;

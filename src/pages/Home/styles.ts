@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const NewTaskContainer = styled.div`
+export const NewTaskContainer = styled.form`
   display: flex;
   margin-top: -2%;
   align-items: center;
