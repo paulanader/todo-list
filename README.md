@@ -1,4 +1,4 @@
-#To-Do List Front-end Project using React.js and TypeScript
+# To-Do List Front-end Project using React.js and TypeScript
 
 Demo: [site](https://paula-nader-todo-list.netlify.app/)
 
